@@ -1,6 +1,6 @@
 import sys
 import numpy as np
-from iConBuilder import ProteinBuilder
+from iCon import ProteinBuilder
 
 pdb = sys.argv[1]
 seq = sys.argv[2]
