@@ -67,11 +67,11 @@ def transform(CA, CO, atoms, theta=120.0, legnth=1.92):
         R2 = rotation_matrix(rot_axis2, angle2)
 
     for atom in atoms[1:]:
-        vec = np.array([atom[6]-CO, atom[7]-CO, atom[8]-CO])
-        vec_rotated = R2 @ vec
-        atom[6] = new_CO + vec_rotated[0]
-        atom[7] = new_CO + vec_rotated[1]
-        atom[8] = new_CO + vec_rotated[2]
+        vec = np.array([atom[6], atom[7], atom[8]]) - nCA
+        new_atom = new + R2 @ (vec)
+        atom[6] = new_atom[0]
+        atom[7] = new_atom[1]
+        atom[8] = new_atom[2]
     return atoms
 
 def build(seqs, out):
