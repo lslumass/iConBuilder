@@ -5,8 +5,8 @@
 
 BOND
 !bonds in backbone
-CA0   CO     300.0      1.92  ! CA-CO (non-gly, non-Ala)
-CAG   CO     300.0      1.92  ! CA-CO (gly)
+CA0   CON    300.0      1.92  ! CA-CO (non-gly, non-Ala)
+CAG   CON    300.0      1.92  ! CA-CO (gly)
 !CA-CB
 CA0   A1A    200.0      1.62  ! ala
 CA0   A2V    300.0      2.01  ! val
