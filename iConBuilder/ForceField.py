@@ -66,7 +66,7 @@ def buildiConSystem(psf, system, ffs):
         residues.append(atom.residue.name)
     
     # 3 Replace HarmonicAngle with Restricted Bending (ReB) potential
-    ReB = CustomAngleForce("0.5*kt*(theta-theta0)^2/sin(theta));")
+    ReB = CustomAngleForce("0.5*kt*(theta-theta0)^2/sin(theta);")
     ReB.setName('ReBAngleForce')
     ReB.addPerAngleParameter("theta0")
     ReB.addPerAngleParameter("kt")
