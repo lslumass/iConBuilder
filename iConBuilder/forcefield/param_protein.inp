@@ -51,9 +51,9 @@ A3W   A4W    300.0      2.23  ! trp CE-CF
 
 THETAS
 !angles in backbone             
-CA0   CON   CA0   50.0     174.5  ! non-pro, non-gly
-CA0   CON   CAG   50.0     174.5  ! gly
-CAG   CON   CAG   50.0     174.5  ! gly-gly
+CA0   CON   CA0   50.0     124.5  ! non-pro, non-gly
+CA0   CON   CAG   50.0     124.5  ! gly
+CAG   CON   CAG   50.0     124.5  ! gly-gly
 CON   CA0   CON    5.0     115.0  ! non-gly
 CON   CAG   CON    5.0     115.6  ! gly
 !CON-CA-CB
