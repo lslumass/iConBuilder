@@ -37,7 +37,7 @@ setup(
     platforms="Tested on Ubuntu 22.04",
     packages=["iConBuilder"],
     package_dir={'iConBuilder':'iConBuilder'},
-    package_data={"iConBuilder":["map/*", "forcefield/*.inp"]},
+    package_data={"iConBuilder":["map/protein/*", "map/RNA/*", "forcefield/*.inp"]},
     install_requires=INSTALL_REQUIRES,
     extras_require={"test": TEST_REQUIRES + INSTALL_REQUIRES,},
     classifiers=[
