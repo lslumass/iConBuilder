@@ -1,7 +1,7 @@
 from setuptools import setup
 
 
-INSTALL_REQUIRES = ["Biopython"]
+INSTALL_REQUIRES = []
 
 TEST_REQUIRES = [
     # testing and coverage
@@ -17,7 +17,7 @@ TEST_REQUIRES = [
 with open("README.md", "r") as f:
     long_description = f.read()
 
-with open("HyresBuilder/__init__.py", "r") as f:
+with open("iConBuilder/__init__.py", "r") as f:
     init = f.readlines()
 
 for line in init:
@@ -25,19 +25,19 @@ for line in init:
         __version__ = line.split('"')[-2]
 
 setup(
-    name="HyresBuilder",
+    name="iConBuilder",
     version=__version__,
     author="Shanlong Li",
     author_email="shanlongli@umass.edu",
-    description="Create HyRes peptide PDB files with specified geometry",
+    description="Build iCon models for protein/RNA condensation simulations",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/wayuer19/HyresBuilder",
-    download_url="https://github.com/wayuer19/HyresBuilder/releases",
+    url="https://github.com/lslumass/iConBuilder",
+    download_url="https://github.com/lslumass/iConBuilder/releases",
     platforms="Tested on Ubuntu 22.04",
-    packages=["HyresBuilder"],
-    package_dir={'HyresBuilder':'HyresBuilder'},
-    package_data={"HyresBuilder":["map/*.map", "forcefield/*.inp"]},
+    packages=["iConBuilder"],
+    package_dir={'iConBuilder':'iConBuilder'},
+    package_data={"iConBuilder":["map/*", "forcefield/*.inp"]},
     install_requires=INSTALL_REQUIRES,
     extras_require={"test": TEST_REQUIRES + INSTALL_REQUIRES,},
     classifiers=[
