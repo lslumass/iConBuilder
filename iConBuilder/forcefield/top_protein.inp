@@ -47,7 +47,7 @@ DECL +CO
 
 RESI ALA     0.00
 GROU
-ATOM CA   CAA     0.00
+ATOM CA   CA0     0.00
 ATOM CO   CON     0.00
 ATOM CB   A1A     0.00
 BOND CA   CO      -CO    CA       CO    +CA
