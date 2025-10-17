@@ -7,8 +7,8 @@ The package consists of the following Python modules:
 * HyresBuilder
 * Geometry
 """
-__version__ = "3.0.0"
-from .iConBuilder import *
+__version__ = "0.1.0"
+#from .iConBuilder import *
 #from .Geometry import *
 #from .RNAbuilder import *
 #from .HyresFF import *
