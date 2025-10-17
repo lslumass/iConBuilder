@@ -22,11 +22,11 @@ def set_terminus(gen, segid, charge_status):
             print("Error: Only 'neutral', 'charged', 'NT', and 'CT' charge status are supported.")
             exit(1)
             
-def at2hyres(pdb_in, pdb_out):
+def cgProtein(pdb_in, pdb_out):
     '''
-    at2hyres: convert all-atom protein to hyres cg pdb
+    convert all-atom protein to cg pdb
     pdb_in: input all-atom pdb file
-    pdb_out: output hyres cg pdb file
+    pdb_out: output cg pdb file
     '''
     # read input pdb file
     data, tmp = {}, {}
