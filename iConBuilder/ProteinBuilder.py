@@ -26,14 +26,52 @@ def read_map(seq):
         atoms.append(atom)
     return atoms
 
-def transform(ref, atoms):
-    refx, refy, refz = ref[0], ref[1], ref[2]
-    Px, Py, Pz = atoms[0][6], atoms[0][7], atoms[0][8]
-    dx, dy, dz = Px-refx, Py-refy, Pz-refz
-    for atom in atoms:
-        atom[6] -= dx
-        atom[7] -= dy
-        atom[8] -= dz
+def transform(CA, CO, atoms, theta=120.0, legnth=1.92):
+    nCA, nCO = np.array([atoms[0][6], atoms[0][7], atoms[0][8]]), np.array([atoms[1][6], atoms[1][7], atoms[1][8]])   # positions of CA and CO for next residue
+    def norm(v):
+        return v / np.linalg.norm(v)
+    
+    def rotation_matrix(axis, theta=theta):
+        axis = norm(axis)
+        K = np.array([[0, -axis[2], axis[1]],
+                      [axis[2], 0, -axis[0]],
+                      [-axis[1], axis[0], 0]])
+        I = np.eye(3)
+        return I + np.sin(theta) * K + (1 - np.cos(theta)) * np.dot(K, K)
+    
+    CACO = np.array(CO) - np.array(CA)
+    CACO_norm = norm(CACO)
+    new = CO + legnth * CACO_norm
+    atoms[0][6], atoms[0][7], atoms[0][8] = new[0], new[1], new[2] # update CA position
+
+    COCA = CO - new
+    COCA_norm = norm(COCA)
+    
+    nCACO = nCO - nCA
+    rot_axis = np.cross(COCA_norm, nCACO)
+    rot_axis = norm(rot_axis)
+    angle = np.radians(theta)
+    R = rotation_matrix(rot_axis, angle)
+
+    v_new = R @ COCA
+    new_CO = new + norm(v_new) * np.linalg.norm(nCACO)
+
+    v1, v2 = norm(nCACO), norm(new_CO - new)
+    cross = np.cross(v1, v2)
+    dot = np.clip(np.dot(v1, v2), -1.0, 1.0)
+    if np.linalg.norm(cross) < 1e-8:
+        R2 = np.eye(3)
+    else:
+        rot_axis2 = norm(cross)
+        angle2 = np.arccos(dot)
+        R2 = rotation_matrix(rot_axis2, angle2)
+
+    for atom in atoms[1:]:
+        vec = np.array([atom[6]-CO, atom[7]-CO, atom[8]-CO])
+        vec_rotated = R2 @ vec
+        atom[6] = new_CO + vec_rotated[0]
+        atom[7] = new_CO + vec_rotated[1]
+        atom[8] = new_CO + vec_rotated[2]
     return atoms
 
 def build(seqs, out):
@@ -42,14 +80,18 @@ def build(seqs, out):
         print('REMARK  CREATE BY ProteinBuilder/SHANLONG LI', file=f)
         idx = 0
         res = 0
-        ref = [9000.0, 9000.0, 9000.0]
-        for seq in seqs:
+        for i, seq in enumerate(seqs):
             atoms = read_map(seq)
+            if i == 0:
+                atoms = atoms
+            else:
+                atoms = transform(CA, CO, atoms)
+            CA = [atoms[0][6], atoms[0][7], atoms[0][8]]
+            CO = [atoms[1][6], atoms[1][7], atoms[1][8]]
+            
             for atom in atoms:
                 atom[1] += idx
                 atom[5] += res
-            atoms = transform(ref, atoms)
-            ref = [atoms[1][6], atoms[1][7], atoms[1][8] + 1.92]
             idx += len(atoms)
             res += 1
             printcg(atoms, f)
