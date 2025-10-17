@@ -85,11 +85,11 @@ def transform(CA, CO, atoms, theta=120.0, legnth=1.92):
         CA_new = np.array([atoms[0][6], atoms[0][7], atoms[0][8]])
         CO_new = np.array([atoms[1][6], atoms[1][7], atoms[1][8]])
         CB_new = np.array([atoms[2][6], atoms[2][7], atoms[2][8]])
-        if np.linalg.norm(CB_new - CO) <= 1.92:
+        if np.linalg.norm(CB_new - CO) <= 2.92:
             for angle_deg_step in np.linspace(10, 360, 36):  # 10° steps
                 angle_step_rad = np.radians(angle_deg_step)
                 F_rotated = rotate_around_axis(CB_new, CA_new, CO_new, angle_step_rad)
-                if np.linalg.norm(F_rotated - CO) > 1.92:
+                if np.linalg.norm(F_rotated - CO) > 2.92:
                     for atom in atoms[2:]:
                         point = np.array([atom[6], atom[7], atom[8]])
                         rotated_point = rotate_around_axis(point, CA_new, CO_new, angle_step_rad)
