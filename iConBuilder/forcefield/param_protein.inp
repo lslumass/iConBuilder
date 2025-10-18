@@ -7,12 +7,12 @@ BOND
 !bonds in backbone
 CA0   CON    300.0      1.92  ! CA-CO (non-gly, non-Ala)
 CAG   CON    300.0      1.92  ! CA-CO (gly)
-CA0   CA0    300.0      3.80  ! 
-CA0   CAG    300.0      3.80  !
-CA0   CAP    300.0      3.80  ! proline
-CAG   CAG    300.0      3.80  ! gly-gly
-CAG   CAP    300.0      3.80  ! gly-pro
-CAP   CAP    300.0      3.80  ! pro-pro
+CA0   CA0      0.0      3.80  ! 
+CA0   CAG      0.0      3.80  !
+CA0   CAP      0.0      3.80  ! proline
+CAG   CAG      0.0      3.80  ! gly-gly
+CAG   CAP      0.0      3.80  ! gly-pro
+CAP   CAP      0.0      3.80  ! pro-pro
 !CA-CB
 CA0   A1A    200.0      1.62  ! ala
 CA0   A2V    300.0      2.01  ! val
