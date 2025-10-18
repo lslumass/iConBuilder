@@ -1,0 +1,270 @@
+* topology file for iCon protein force field
+* 
+*
+   20    1              
+MASS    12 CA0   56.000   ! CA (non-Gly, non-Pro)
+MASS    13 CAG   57.000   ! CA (Gly)
+MASS    14 CAP   55.000   ! CA (Pro)
+MASS   208 A1A   25.000   ! Ala side chain
+MASS   209 A2V   43.089   ! Val side chain
+MASS   210 A1L   57.116   ! Leu side chain
+MASS   211 A1I   57.116   ! Ile side chain
+MASS   212 A5M   75.149   ! Met side chain
+MASS   213 P5N   58.060   ! Asn side chain
+MASS   214 QaD   58.036   ! Asp side chain
+MASS   215 P4Q   72.087   ! Gln side chain
+MASS   216 QaE   72.063   ! Glu side chain
+MASS   217 P1C   47.095   ! Cys side chain
+MASS   218 P1S   31.034   ! Ser side chain
+MASS   219 P1T   45.061   ! Thr side chain
+MASS   220 A2P   42.081   ! Pro side chain 
+MASS   221 A3K   42.081   ! Lys side chain 1 CB
+MASS   222 QdK   31.058   ! Lys side chain 2 CC
+MASS   223 A3R   42.081   ! Arg side chain 1 CB
+MASS   224 QdR   59.072   ! Arg side chain 2 CC
+MASS   225 A4H   26.038   ! His side chain 1 CB
+MASS   226 P1H   27.026   ! His side chain 2 CC
+MASS   227 P2H   28.034   ! His side chain 3 CD
+MASS   228 A1F   39.057   ! Phe side chain 1 CB
+MASS   229 A2F   26.038   ! Phe side chain 2 CC
+MASS   230 A3F   26.038   ! Phe side chain 3 CD
+MASS   231 A1Y   39.057   ! Tyr side chain 1 CB
+MASS   232 A2Y   26.038   ! Tyr side chain 2 CC
+MASS   233 P1Y   42.037   ! Tyr side chain 3 CD
+MASS   234 A1W   26.038   ! Trp side chain 1 CB
+MASS   235 P1W   28.034   ! Trp side chain 2 CC
+MASS   236 A2W   24.022   ! Trp side chain 3 CD
+MASS   237 A3W   26.038   ! Trp side chain 4 CE
+MASS   238 A4W   26.038   ! Trp side chain 5 CF
+
+
+DECL -CA
+DECL +CA
+
+
+
+RESI ALA     0.00
+GROU
+ATOM CA   CA0     0.00
+ATOM CB   A1A     0.00
+BOND CA   -CA      CA    +CA
+BOND CA   CB
+ANGL -CA  CA   +CA      +CA  CA   CB
+IMPH CA   -CA   CA   CB
+
+
+RESI CYS     0.00
+GROU
+ATOM CA   CA0     0.00
+ATOM CB   P1C     0.00
+BOND CA   -CA      CA    +CA
+BOND CA   CB
+ANGL -CA  CA   +CA      +CA  CA   CB
+IMPH CA   -CA   CA   CB
+
+
+RESI VAL     0.00
+GROU
+ATOM CA   CA0     0.00
+ATOM CB   A2V     0.00
+BOND CA   -CA      CA    +CA
+BOND CA   CB
+ANGL -CA  CA   +CA      +CA  CA   CB
+IMPH CA   -CA   CA   CB
+
+
+RESI LEU     0.00
+GROU
+ATOM CA   CA0     0.00
+ATOM CB   A1L     0.00
+BOND CA   -CA      CA    +CA
+BOND CA   CB
+ANGL -CA  CA   +CA      +CA  CA   CB
+IMPH CA   -CA   CA   CB
+
+
+RESI ILE     0.00
+GROU
+ATOM CA   CA0     0.00
+ATOM CB   A1I     0.00
+BOND CA   -CA      CA    +CA
+BOND CA   CB
+ANGL -CA  CA   +CA      +CA  CA   CB
+IMPH CA   -CA   CA   CB
+
+
+RESI MET     0.00
+GROU
+ATOM CA   CA0     0.00
+ATOM CB   A5M     0.00
+BOND CA   -CA      CA    +CA
+BOND CA   CB
+ANGL -CA  CA   +CA      +CA  CA   CB
+IMPH CA   -CA   CA   CB
+
+
+RESI ASN     0.00
+GROU
+ATOM CA   CA0     0.00
+ATOM CB   P5N     0.00
+BOND CA   -CA      CA    +CA
+BOND CA   CB
+ANGL -CA  CA   +CA      +CA  CA   CB
+IMPH CA   -CA   CA   CB
+
+
+RESI ASP    -1.00
+GROU
+ATOM CA   CA0     0.00
+GROU
+ATOM CB   QaD    -1.00
+BOND CA   -CA      CA    +CA
+BOND CA   CB
+ANGL -CA  CA   +CA      +CA  CA   CB
+IMPH CA   -CA   CA   CB
+
+
+RESI GLN     0.00
+GROU
+ATOM CA   CA0     0.00
+ATOM CB   P4Q     0.00
+BOND CA   -CA      CA    +CA
+BOND CA   CB
+ANGL -CA  CA   +CA      +CA  CA   CB
+IMPH CA   -CA   CA   CB
+
+
+RESI GLU    -1.00
+GROU
+ATOM CA   CA0     0.00
+GROU
+ATOM CB   QaE    -1.00
+BOND CA   -CA      CA    +CA
+BOND CA   CB
+ANGL -CA  CA   +CA      +CA  CA   CB
+IMPH CA   -CA   CA   CB
+
+
+RESI SER     0.00
+GROU
+ATOM CA   CA0     0.00
+ATOM CB   P1S     0.00
+BOND CA   -CA      CA    +CA
+BOND CA   CB
+ANGL -CA  CA   +CA      +CA  CA   CB
+IMPH CA   -CA   CA   CB
+
+
+RESI THR     0.00
+GROU
+ATOM CA   CA0     0.00
+ATOM CB   P1T     0.00
+BOND CA   -CA      CA    +CA
+BOND CA   CB
+ANGL -CA  CA   +CA      +CA  CA   CB
+IMPH CA   -CA   CA   CB
+
+
+RESI LYS     1.00
+GROU
+ATOM CA   CA0     0.00
+GROU
+ATOM CB   A3K     0.00
+ATOM CC   QdK     1.00
+BOND CA   -CA      CA    +CA      
+BOND CA   CB       CB    CC
+ANGL -CA  CA  +CA      +CA  CA   CB      CA  CB   CC
+DIHE -CA  CA  CB  CC
+IMPH CA   -CA   CA   CB
+
+
+RESI ARG     1.00
+GROU
+ATOM CA   CA0     0.00
+GROU
+ATOM CB   A3R     0.00
+ATOM CC   QdR     1.00
+BOND CA   -CA      CA    +CA      
+BOND CA   CB       CB    CC
+ANGL -CA  CA  +CA      +CA  CA   CB      CA  CB   CC
+DIHE -CA  CA  CB  CC
+IMPH CA   -CA   CA   CB
+
+
+RESI HIS     0.00
+GROU
+ATOM CA   CA0     0.00
+GROU
+ATOM CB   A4H     0.00
+ATOM CC   P1H     0.00
+ATOM CD   P2H     0.00
+BOND CA   -CA      CA    +CA      
+BOND CA   CB       CB    CC     CB   CD     CC   CD
+ANGL -CA  CA  +CA      +CA  CA   CB      CA  CB   CC
+DIHE -CA  CA  CB  CC
+IMPH CA   -CA   CA   CB
+
+
+RESI PHE     0.00
+GROU
+ATOM CA   CA0     0.00
+GROU
+ATOM CB   A1F     0.00
+ATOM CC   A2F     0.00
+ATOM CD   A3F     0.00
+BOND CA   -CA      CA    +CA      
+BOND CA   CB       CB    CC     CB   CD     CC   CD
+ANGL -CA  CA  +CA      +CA  CA   CB      CA  CB   CC
+DIHE -CA  CA  CB  CC
+IMPH CA   -CA   CA   CB
+
+
+RESI TYR     0.00
+GROU
+ATOM CA   CA0     0.00
+GROU
+ATOM CB   A1Y     0.00
+ATOM CC   A2Y     0.00
+ATOM CD   P1Y     0.00
+BOND CA   -CA      CA    +CA      
+BOND CA   CB       CB    CC     CB   CD     CC   CD
+ANGL -CA  CA  +CA      +CA  CA   CB      CA  CB   CC
+DIHE -CA  CA  CB  CC
+IMPH CA   -CA   CA   CB
+
+
+RESI TRP     0.00
+GROU
+ATOM CA   CA0     0.00
+GROU
+ATOM CB   A1W     0.00
+ATOM CC   P1W     0.00
+ATOM CD   A2W     0.00
+ATOM CE   A3W     0.00
+ATOM CF   A4W     0.00
+BOND CA   -CA      CA    +CA      
+BOND CA   CB       CB    CC       CB    CD      CC   CD
+BOND CD   CE       CD    CF       CE    CF
+ANGL -CA  CA  +CA      +CA  CA   CB      CA  CB   CC
+ANGL CB   CD   CF      CC   CD   CE
+DIHE -CA  CA  CB  CC
+IMPH CA   -CA   CA   CB       CD   CE   CF   CB        CD   CE   CF   CC
+
+
+RESI PRO     0.00
+GROU
+ATOM CA   CAP     0.00
+ATOM CB   A2P     0.00
+BOND CA   -CA      CA    +CA
+BOND CA   CB
+ANGL -CA  CA   +CA      +CA  CA   CB
+IMPH CA   -CA   CA   CB
+
+
+RESI GLY     0.00
+GROU
+ATOM CA   CAG     0.00
+BOND CA   -CA      CA    +CA
+
+
+END

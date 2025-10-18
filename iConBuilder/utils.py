@@ -118,7 +118,9 @@ def setup(args, dt, pressure=1*unit.atmosphere, friction=0.1/unit.picosecond, gp
         exit(1)
     
     # 3. force field parameters
-    temperture = T*unit.kelvin 
+    cutoff = 1.8*unit.nanometer                                 # nonbonded cutoff
+    d_switch = 1.6*unit.nanometer                               # switch function starting distance
+    temperature = T*unit.kelvin 
     er_t = cal_er(T)                                                   # relative electric constant
     er = er_t*60.0/80.0
     dh = cal_dh(c_ion, T)                                            # Debye-Huckel screening length in nm
@@ -146,12 +148,14 @@ def setup(args, dt, pressure=1*unit.atmosphere, friction=0.1/unit.picosecond, gp
     psf = CharmmPsfFile(psf_file)
     top = psf.topology
     if ensemble == 'non':
-        system = psf.createSystem(params, nonbondedMethod=CutoffNonPeriodic, constraints=HBonds)
+        system = psf.createSystem(params, nonbondedMethod=CutoffNonPeriodic, constraints=HBonds,
+                                  nonbondedCutoff=cutoff, switchDistance=d_switch, temperature=temperature)
     else:
         psf.setBox(lx, ly, lz)
         top.setPeriodicBoxVectors((a, b, c))
         top.setUnitCellDimensions((lx, ly,lz))
-        system = psf.createSystem(params, nonbondedMethod=CutoffPeriodic, constraints=HBonds)
+        system = psf.createSystem(params, nonbondedMethod=CutoffNonPeriodic, constraints=HBonds,
+                                  nonbondedCutoff=cutoff, switchDistance=d_switch, temperature=temperature)
         system.setDefaultPeriodicBoxVectors(a, b, c)
 
     # 6. construct force field
@@ -162,7 +166,7 @@ def setup(args, dt, pressure=1*unit.atmosphere, friction=0.1/unit.picosecond, gp
     print('\n################### prepare simulation ####################')
     if ensemble == 'NPT':
         print('This is a NPT system')
-        system.addForce(MonteCarloBarostat(pressure, temperture, 25))
+        system.addForce(MonteCarloBarostat(pressure, temperature, 25))
     elif ensemble == 'NVT':
         print('This is a NVT system')
     elif ensemble == 'non':
@@ -171,12 +175,12 @@ def setup(args, dt, pressure=1*unit.atmosphere, friction=0.1/unit.picosecond, gp
         print("Error: The ensemble must be NPT, NVT or non. The input value is {}.".format(ensemble))
         exit(1)
 
-    integrator = LangevinMiddleIntegrator(temperture, friction, dt)
+    integrator = LangevinMiddleIntegrator(temperature, friction, dt)
     plat = Platform.getPlatformByName('CUDA')
     prop = {'Precision': 'mixed', 'DeviceIndex': gpu_id}
     sim = Simulation(top, system, integrator, plat, prop)
     sim.context.setPositions(pdb.positions)
-    sim.context.setVelocitiesToTemperature(temperture)
-    print(f'Langevin, CUDA, {temperture}')
+    sim.context.setVelocitiesToTemperature(temperature)
+    print(f'Langevin, CUDA, {temperature}')
     
     return system, sim

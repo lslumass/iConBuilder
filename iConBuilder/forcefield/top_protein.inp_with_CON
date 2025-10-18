@@ -3,9 +3,8 @@
 *
    20    1              
 MASS    11 CON   30.000   ! peptide bond
-MASS    12 CA0   25.000   ! CA (non-Gly, non-Pro)
+MASS    12 CA0   25.000   ! CA (non-Gly, non-Ala)
 MASS    13 CAG   26.000   ! CA (Gly)
-MASS    14 CAP   24.000   ! CA (Pro)
 MASS   208 A1A   25.000   ! Ala side chain
 MASS   209 A2V   43.089   ! Val side chain
 MASS   210 A1L   57.116   ! Leu side chain
@@ -52,9 +51,9 @@ ATOM CA   CA0     0.00
 ATOM CO   CON     0.00
 ATOM CB   A1A     0.00
 BOND CA   CO      -CO    CA       CO    +CA
-BOND -CA  CA      CA    +CA       CA   CB
-ANGL -CO   CA   CO       CO   CA   CB
-DIHE CB   CA   CO   +CA
+BOND CA   CB
+ANGL CA   CO   +CA      CO   +CA   +CO       CO   CA   CB
+DIHE CA   CO   +CA  +CO       CB   CA   CO   +CA
 IMPH CA   -CO   CO   CB
 
 
@@ -64,9 +63,9 @@ ATOM CA   CA0     0.00
 ATOM CO   CON     0.00
 ATOM CB   P1C     0.00
 BOND CA   CO      -CO    CA       CO    +CA
-BOND -CA  CA      CA    +CA       CA   CB
-ANGL -CO   CA   CO       CO   CA   CB
-DIHE CB   CA   CO   +CA
+BOND CA   CB
+ANGL CA   CO   +CA      CO   +CA   +CO       CO   CA   CB
+DIHE CA   CO   +CA  +CO       CB   CA   CO   +CA
 IMPH CA   -CO   CO   CB
 
 
@@ -76,9 +75,9 @@ ATOM CA   CA0     0.00
 ATOM CO   CON     0.00
 ATOM CB   A2V     0.00
 BOND CA   CO      -CO    CA       CO    +CA
-BOND -CA  CA      CA    +CA       CA   CB
-ANGL -CO   CA   CO       CO   CA   CB
-DIHE CB   CA   CO   +CA
+BOND CA   CB
+ANGL CA   CO   +CA      CO   +CA   +CO       CO   CA   CB
+DIHE CA   CO   +CA  +CO       CB   CA   CO   +CA
 IMPH CA   -CO   CO   CB
 
 
@@ -88,9 +87,9 @@ ATOM CA   CA0     0.00
 ATOM CO   CON     0.00
 ATOM CB   A1L     0.00
 BOND CA   CO      -CO    CA       CO    +CA
-BOND -CA  CA      CA    +CA       CA   CB
-ANGL -CO   CA   CO       CO   CA   CB
-DIHE CB   CA   CO   +CA
+BOND CA   CB
+ANGL CA   CO   +CA      CO   +CA   +CO       CO   CA   CB
+DIHE CA   CO   +CA  +CO       CB   CA   CO   +CA
 IMPH CA   -CO   CO   CB
 
 
@@ -100,9 +99,9 @@ ATOM CA   CA0     0.00
 ATOM CO   CON     0.00
 ATOM CB   A1I     0.00
 BOND CA   CO      -CO    CA       CO    +CA
-BOND -CA  CA      CA    +CA       CA   CB
-ANGL -CO   CA   CO       CO   CA   CB
-DIHE CB   CA   CO   +CA
+BOND CA   CB
+ANGL CA   CO   +CA      CO   +CA   +CO       CO   CA   CB
+DIHE CA   CO   +CA  +CO       CB   CA   CO   +CA
 IMPH CA   -CO   CO   CB
 
 
@@ -112,9 +111,9 @@ ATOM CA   CA0     0.00
 ATOM CO   CON     0.00
 ATOM CB   A5M     0.00
 BOND CA   CO      -CO    CA       CO    +CA
-BOND -CA  CA      CA    +CA       CA   CB
-ANGL -CO   CA   CO       CO   CA   CB
-DIHE CB   CA   CO   +CA
+BOND CA   CB
+ANGL CA   CO   +CA      CO   +CA   +CO       CO   CA   CB
+DIHE CA   CO   +CA  +CO       CB   CA   CO   +CA
 IMPH CA   -CO   CO   CB
 
 
@@ -124,9 +123,9 @@ ATOM CA   CA0     0.00
 ATOM CO   CON     0.00
 ATOM CB   P5N     0.00
 BOND CA   CO      -CO    CA       CO    +CA
-BOND -CA  CA      CA    +CA       CA   CB
-ANGL -CO   CA   CO       CO   CA   CB
-DIHE CB   CA   CO   +CA
+BOND CA   CB
+ANGL CA   CO   +CA      CO   +CA   +CO       CO   CA   CB
+DIHE CA   CO   +CA  +CO       CB   CA   CO   +CA
 IMPH CA   -CO   CO   CB
 
 
@@ -137,9 +136,9 @@ ATOM CO   CON     0.00
 GROU
 ATOM CB   QaD    -1.00
 BOND CA   CO      -CO    CA       CO    +CA
-BOND -CA  CA      CA    +CA       CA   CB
-ANGL -CO   CA   CO       CO   CA   CB
-DIHE CB   CA   CO   +CA
+BOND CA   CB
+ANGL CA   CO   +CA      CO   +CA   +CO       CO   CA   CB
+DIHE CA   CO   +CA  +CO       CB   CA   CO   +CA
 IMPH CA   -CO   CO   CB
 
 
@@ -149,9 +148,9 @@ ATOM CA   CA0     0.00
 ATOM CO   CON     0.00
 ATOM CB   P4Q     0.00
 BOND CA   CO      -CO    CA       CO    +CA
-BOND -CA  CA      CA    +CA       CA   CB
-ANGL -CO   CA   CO       CO   CA   CB
-DIHE CB   CA   CO   +CA
+BOND CA   CB
+ANGL CA   CO   +CA      CO   +CA   +CO       CO   CA   CB
+DIHE CA   CO   +CA  +CO       CB   CA   CO   +CA
 IMPH CA   -CO   CO   CB
 
 
@@ -162,9 +161,9 @@ ATOM CO   CON     0.00
 GROU
 ATOM CB   QaE    -1.00
 BOND CA   CO      -CO    CA       CO    +CA
-BOND -CA  CA      CA    +CA       CA   CB
-ANGL -CO   CA   CO       CO   CA   CB
-DIHE CB   CA   CO   +CA
+BOND CA   CB
+ANGL CA   CO   +CA      CO   +CA   +CO       CO   CA   CB
+DIHE CA   CO   +CA  +CO       CB   CA   CO   +CA
 IMPH CA   -CO   CO   CB
 
 
@@ -174,9 +173,9 @@ ATOM CA   CA0     0.00
 ATOM CO   CON     0.00
 ATOM CB   P1S     0.00
 BOND CA   CO      -CO    CA       CO    +CA
-BOND -CA  CA      CA    +CA       CA   CB
-ANGL -CO   CA   CO       CO   CA   CB
-DIHE CB   CA   CO   +CA
+BOND CA   CB
+ANGL CA   CO   +CA      CO   +CA   +CO       CO   CA   CB
+DIHE CA   CO   +CA  +CO       CB   CA   CO   +CA
 IMPH CA   -CO   CO   CB
 
 
@@ -186,9 +185,9 @@ ATOM CA   CA0     0.00
 ATOM CO   CON     0.00
 ATOM CB   P1T     0.00
 BOND CA   CO      -CO    CA       CO    +CA
-BOND -CA  CA      CA    +CA       CA   CB
-ANGL -CO   CA   CO       CO   CA   CB
-DIHE CB   CA   CO   +CA
+BOND CA   CB
+ANGL CA   CO   +CA      CO   +CA   +CO       CO   CA   CB
+DIHE CA   CO   +CA  +CO       CB   CA   CO   +CA
 IMPH CA   -CO   CO   CB
 
 
@@ -200,9 +199,10 @@ GROU
 ATOM CB   A3K     0.00
 ATOM CC   QdK     1.00
 BOND CA   CO      -CO    CA       CO    +CA
-BOND -CA  CA      CA    +CA       CA   CB      CB   CC
-ANGL -CO   CA   CO       CO   CA   CB      CA   CB   CC
-DIHE CB   CA   CO   +CA       CO   CB   CA   CC
+BOND CA   CB      CB   CC
+ANGL CA   CO   +CA      CO   +CA   +CO
+ANGL CO   CA   CB       CA   CB   CC
+DIHE CA   CO   +CA  +CO       CB   CA   CO   +CA
 IMPH CA   -CO   CO   CB
 
 
@@ -214,9 +214,10 @@ GROU
 ATOM CB   A3R     0.00
 ATOM CC   QdR     1.00
 BOND CA   CO      -CO    CA       CO    +CA
-BOND -CA  CA      CA    +CA       CA   CB      CB   CC
-ANGL -CO   CA   CO       CO   CA   CB      CA   CB   CC
-DIHE CB   CA   CO   +CA       CO   CB   CA   CC
+BOND CA   CB      CB   CC
+ANGL CA   CO   +CA      CO   +CA   +CO
+ANGL CO   CA   CB       CA   CB   CC
+DIHE CA   CO   +CA  +CO       CB   CA   CO   +CA
 IMPH CA   -CO   CO   CB
 
 
@@ -228,11 +229,11 @@ GROU
 ATOM CB   A4H     0.00
 ATOM CC   P1H     0.00
 ATOM CD   P2H     0.00
-BOND CA   CO      -CO  CA      CO   +CA
-BOND -CA  CA      CA   +CA     CA   CB
-BOND CB   CC      CB   CC      CB   CD     CC   CD
-ANGL -CO   CA   CO       CO   CA   CB      CA   CB   CC
-DIHE CB   CA   CO   +CA       CO   CB   CA   CC
+BOND CA   CO      -CO    CA       CO    +CA
+BOND CA   CB      CB   CC     CB   CD     CC   CD
+ANGL CA   CO   +CA      CO   +CA   +CO
+ANGL CO   CA   CB       CA   CB   CC
+DIHE CA   CO   +CA  +CO       CB   CA   CO   +CA
 IMPH CA   -CO   CO   CB
 
 
@@ -244,11 +245,11 @@ GROU
 ATOM CB   A1F     0.00
 ATOM CC   A2F     0.00
 ATOM CD   A3F     0.00
-BOND CA   CO      -CO  CA      CO   +CA
-BOND -CA  CA      CA   +CA     CA   CB
-BOND CB   CC      CB   CC      CB   CD     CC   CD
-ANGL -CO   CA   CO       CO   CA   CB      CA   CB   CC
-DIHE CB   CA   CO   +CA       CO   CB   CA   CC
+BOND CA   CO      -CO    CA       CO    +CA
+BOND CA   CB      CB   CC     CB   CD     CC   CD
+ANGL CA   CO   +CA      CO   +CA   +CO
+ANGL CO   CA   CB       CA   CB   CC
+DIHE CA   CO   +CA  +CO       CB   CA   CO   +CA
 IMPH CA   -CO   CO   CB
 
 
@@ -260,11 +261,11 @@ GROU
 ATOM CB   A1Y     0.00
 ATOM CC   A2Y     0.00
 ATOM CD   P1Y     0.00
-BOND CA   CO      -CO  CA      CO   +CA
-BOND -CA  CA      CA   +CA     CA   CB
-BOND CB   CC      CB   CC      CB   CD     CC   CD
-ANGL -CO   CA   CO       CO   CA   CB      CA   CB   CC
-DIHE CB   CA   CO   +CA       CO   CB   CA   CC
+BOND CA   CO      -CO    CA       CO    +CA
+BOND CA   CB      CB   CC     CB   CD     CC   CD
+ANGL CA   CO   +CA      CO   +CA   +CO
+ANGL CO   CA   CB       CA   CB   CC
+DIHE CA   CO   +CA  +CO       CB   CA   CO   +CA
 IMPH CA   -CO   CO   CB
 
 
@@ -278,33 +279,26 @@ ATOM CC   P1W     0.00
 ATOM CD   A2W     0.00
 ATOM CE   A3W     0.00
 ATOM CF   A4W     0.00
-BOND CA   CO      -CO  CA      CO   +CA
-BOND -CA  CA      CA   +CA     CA   CB
-BOND CB   CC      CB   CC      CB   CD     CC   CD
-BOND CD   CE       CD    CF       CE    CF
-ANGL -CO   CA   CO       CO   CA   CB      CA   CB   CC
+BOND CA   CO      -CO    CA       CO    +CA
+BOND CA   CB       CB    CC       CB    CD       CC   CD  
+BOND CD   CE       CD    CF       CE    CF 
+ANGL CA   CO   +CA      CO   +CA   +CO
+ANGL CO   CA   CB       CA   CB   CC
 ANGL CB   CD   CF       CC   CD   CE
-DIHE CB   CA   CO   +CA       CO   CB   CA   CC
+DIHE CA   CO   +CA  +CO       CB   CA   CO   +CA
 IMPH CA   -CO   CO   CB       CD   CE   CF   CB        CD   CE   CF   CC
 
 
 RESI PRO     0.00
 GROU
-ATOM CA   CAP     0.00
+ATOM CA   CA0     0.00
 ATOM CO   CON     0.00
 ATOM CB   A2P     0.00
-BOND CA   CO      -CO    CA       CO    +CA
-BOND -CA  CA      CA    +CA       CA    CB      CO    CB
-ANGL -CO   CA   CO       CO   CA   CB
-DIHE CB   CA   CO   +CA
-IMPH CA   -CO   CO   CB
-
-
 BOND CA   CO      -CO    CA       CO    +CA
 BOND CA   CB      CO     CB
 ANGL CA   CO   +CA      CO   +CA   +CO       CO   CA   CB
 DIHE CA   CO   +CA  +CO       CB   CA   CO   +CA
-IMPH CA   -CO   CO   CB
+IMPH CA   -CO   CO   CB       CO   -CA   CA   CB
 
 
 RESI GLY     0.00
@@ -312,7 +306,6 @@ GROU
 ATOM CA   CAG     0.00
 ATOM CO   CON     0.00
 BOND CA   CO      -CO    CA       CO    +CA
-BOND -CA  CA      CA    +CA
 
 
 END
