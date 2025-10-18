@@ -102,7 +102,6 @@ def build(seqs, out):
         print('REMARK  iCon Protein Model', file=f)
         print('REMARK  CREATE BY ProteinBuilder/SHANLONG LI', file=f)
         idx = 1
-        res = 1
         for i, seq in enumerate(seqs):
             atoms = read_map(seq)
             if i == 0:
@@ -112,15 +111,12 @@ def build(seqs, out):
             CA = [atoms[0][6], atoms[0][7], atoms[0][8]]
             CO = [atoms[1][6], atoms[1][7], atoms[1][8]]
             
-            tmp = 0
             for atom in atoms:
                 if atom[2] == 'CO':
                     continue
                 else:
-                    idx += tmp
                     atom[1] = idx
-                    atom[5] += res
+                    atom[5] = i+1
                     printcg(atom, f)
-                    tmp += 1
-            res += 1
+                    idx += 1
         print('END', file=f)
