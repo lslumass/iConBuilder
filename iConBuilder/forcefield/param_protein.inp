@@ -69,7 +69,7 @@ CAG   CAG   CAP    5.0     135.0
 CAG   CAP   CAG    5.0     135.0
 CAG   CAP   CAP    5.0     135.0
 CAP   CAP   CAP    5.0     135.0
-!CA-CA-CB
+!+CA-CA-CB
 CA0   CA0   A1A   20.0     100.0  ! ala
 CA0   CA0   A2V   20.0     112.7  ! val
 CA0   CA0   A1L    5.0     116.8  ! leu
@@ -133,9 +133,13 @@ CAP   CAP   A2P   10.0     125.2  ! pro
 CA0   A3K   QdK   10.0     140.0  ! lys
 CA0   A3R   QdR   10.0     134.3  ! arg
 CA0   A4H   P1H   10.0     129.5  ! his CA-CB-CC
+CA0   A4H   P2H   10.0     140.0  ! his CA-CB-CD
 CA0   A1F   A2F   10.0     132.0  ! phe CA-CB-CC
+CA0   A1F   A3F   10.0     132.0  ! phe CA-CB-CD
 CA0   A1Y   A2Y   10.0     115.6  ! tyr CA-CB-CC
+CA0   A1Y   P1Y   20.0     140.0  ! tyr CA-CB-CD
 CA0   A1W   P1W   20.0     134.7  ! trp CA-CB-CC
+CA0   A1W   A2W   20.0     129.2  ! trp CA-CB-CD
 !CC-CD-CE, CC-CD-CF, CB-CD-CE, CB-CD-CF in trp
 P1W   A2W   A3W   50.0     127.9  ! trp
 A1W   A2W   A4W   50.0      98.6  ! trp

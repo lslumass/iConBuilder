@@ -3,7 +3,7 @@ from openmm.unit import *
 from openmm.app import *
 from openmm import *
 import numpy as np
-from .ForceField import *
+from .iConFF import *
 from .rG4sFF import *
 
 

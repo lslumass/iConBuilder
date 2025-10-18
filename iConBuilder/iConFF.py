@@ -10,6 +10,7 @@ Date: Oct 15, 2025
 from openmm.unit import *
 from openmm.app import *
 from openmm import *
+import numpy as np
 
 
 def buildiConSystem(psf, system, ffs):
@@ -65,13 +66,23 @@ def buildiConSystem(psf, system, ffs):
         atoms.append(atom.name)
         residues.append(atom.residue.name)
     
-    # 3 Replace HarmonicAngle with Restricted Bending (ReB) potential
-    ReB = CustomAngleForce("0.5*kt*(theta-theta0)^2/sin(theta);")
+    # 3 Replace HarmonicAngle with Restricted Bending (ReB) potential 
+    # and modify -CA-CA-CB
+    CABs = {"ALA": [20.0, 121.2], "VAL": [20.0, 126.5], "LEU": [10.0, 121.5], "ILE": [10.0, 120.3], "MET": [10.0, 106.8],
+            "ASN": [10.0, 100.0], "ASP": [10.0, 100.4], "GLN": [10.0, 101.4], "GLU": [10.0, 113.5], "CYS": [10.0, 122.1],
+            "SER": [10.0, 127.8], "THR": [10.0, 121.2], "LYS": [10.0, 111.6], "ARG": [10.0, 109.3], "HIS": [10.0, 129.6],
+            "PHE": [10.0, 124.6], "TYR": [10.0, 120.8], "TRP": [10.0, 134.7], "PRO": [20.0,  80.0]} 
+
+    ReB = CustomAngleForce("0.5*kt*(theta-theta0)^2/sin(theta)^2;")
     ReB.setName('ReBAngleForce')
     ReB.addPerAngleParameter("theta0")
     ReB.addPerAngleParameter("kt")
     for angle_idx in range(hmangle.getNumAngles()):
         ang = hmangle.getAngleParameters(angle_idx)
+        if atoms[ang[0]] == 'CB' and atoms[ang[1]] == 'CA' and atoms[ang[1]] == 'CA':
+            t0 = np.radians(CABs[residues[ang[0]]][1])
+            k0 = CABs[residues[ang[0]]][0]*4.184
+            ReB.addAngle(ang[0], ang[1], ang[2], [t0, k0])
         ReB.addAngle(ang[0], ang[1], ang[2], [ang[3], ang[4]])
     system.addForce(ReB)
 
