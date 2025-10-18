@@ -72,21 +72,21 @@ CAP   CAP   CAP    5.0     135.0
 !+CA-CA-CB
 CA0   CA0   A1A   20.0     100.0  ! ala
 CA0   CA0   A2V   20.0     112.7  ! val
-CA0   CA0   A1L    5.0     116.8  ! leu
+CA0   CA0   A1L   10.0     116.8  ! leu
 CA0   CA0   A1I   10.0     120.2  ! ile
 CA0   CA0   A5M   10.0     140.0  ! met
-CA0   CA0   P5N    5.0     126.6  ! asn
-CA0   CA0   QaD    5.0     118.2  ! asp
+CA0   CA0   P5N   10.0     126.6  ! asn
+CA0   CA0   QaD   10.0     118.2  ! asp
 CA0   CA0   P4Q   10.0     136.1  ! gln
 CA0   CA0   QaE   10.0     125.0  ! glu
-CA0   CA0   P1C    5.0     114.4  ! cys
+CA0   CA0   P1C   10.0     114.4  ! cys
 CA0   CA0   P1S   10.0     100.0  ! ser
 CA0   CA0   P1T   10.0     109.2  ! thr
 CA0   CA0   A3K   10.0     125.5  ! lys
 CA0   CA0   A3R   10.0     125.5  ! arg
-CA0   CA0   A4H    5.0     113.3  ! his
-CA0   CA0   A1F    5.0     108.3  ! phe
-CA0   CA0   A1Y    3.0     113.4  ! tyr
+CA0   CA0   A4H   10.0     113.3  ! his
+CA0   CA0   A1F   10.0     108.3  ! phe
+CA0   CA0   A1Y   10.0     113.4  ! tyr
 CA0   CA0   A1W   10.0     100.0  ! trp
 CA0   CAP   A2P   10.0     125.2  ! pro 
 
@@ -214,9 +214,9 @@ NONBONDED  NBXMOD 3  ATOM CDIEL SWITCH VATOM VDISTANCE VSWITCH -
 
 !                 Emin         Rmin
 !                 (kcal/mol)   (A)
-CA0      0.00     -0.0100      2.1000   0.00     -0.0800      2.1000  ! CA
-CAP      0.00     -0.0100      2.1000   0.00     -0.0800      2.1000  ! CA Pro
-CAG      0.00     -0.0200      2.3000   0.00     -0.1200      2.3000  ! CA Gly
+CA0      0.00     -0.0800      2.1000   0.00     -0.0800      2.1000  ! CA
+CAP      0.00     -0.0800      2.1000   0.00     -0.0800      2.1000  ! CA Pro
+CAG      0.00     -0.1000      2.3000   0.00     -0.1200      2.3000  ! CA Gly
 
 A1A      0.00     -0.1200      2.1100   0.00     -0.1200      2.1100 ! ala,  A,
 A2V      0.00     -0.3000      2.7541   0.00     -0.3000      2.7541 ! val,  V,   
