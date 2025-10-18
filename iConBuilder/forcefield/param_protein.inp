@@ -181,24 +181,24 @@ X     CA0   A1W   P1W     0.00    1     0.0
 
 IMPHI
 !CA chirality
-CA0   X     X     A1A    15.00    0     26.3   ! ala
+CA0   X     X     A1A    25.00    0     26.3   ! ala
 CA0   X     X     A2V    25.00    0     20.0   ! val
-CA0   X     X     A1L    15.00    0     16.0   ! leu
-CA0   X     X     A1I    10.00    0     17.2   ! ile
-CA0   X     X     A5M     5.00    0      0.0   ! met
-CA0   X     X     P5N    15.00    0     14.8   ! asn
-CA0   X     X     QaD    10.00    0     23.0   ! asp
-CA0   X     X     P4Q     5.00    0      0.0   ! gln
-CA0   X     X     QaE    15.00    0     20.0   ! glu
-CA0   X     X     P1C    15.00    0     16.6   ! cys
-CA0   X     X     P1S    10.00    0     22.7   ! ser
-CA0   X     X     P1T    10.00    0     22.9   ! thr
-CA0   X     X     A3K    10.00    0     15.8   ! lys
-CA0   X     X     A3R    10.00    0     16.3   ! arg
-CA0   X     X     A4H    15.00    0     19.3   ! his
-CA0   X     X     A1F    20.00    0     20.1   ! phe
-CA0   X     X     A1Y    10.00    0     18.7   ! tyr
-CA0   X     X     A1W    20.00    0     19.8   ! trp
+CA0   X     X     A1L    25.00    0     16.0   ! leu
+CA0   X     X     A1I    25.00    0     17.2   ! ile
+CA0   X     X     A5M    25.00    0      0.0   ! met
+CA0   X     X     P5N    25.00    0     14.8   ! asn
+CA0   X     X     QaD    25.00    0     23.0   ! asp
+CA0   X     X     P4Q    25.00    0      0.0   ! gln
+CA0   X     X     QaE    25.00    0     20.0   ! glu
+CA0   X     X     P1C    25.00    0     16.6   ! cys
+CA0   X     X     P1S    25.00    0     22.7   ! ser
+CA0   X     X     P1T    25.00    0     22.9   ! thr
+CA0   X     X     A3K    25.00    0     15.8   ! lys
+CA0   X     X     A3R    25.00    0     16.3   ! arg
+CA0   X     X     A4H    25.00    0     19.3   ! his
+CA0   X     X     A1F    25.00    0     20.1   ! phe
+CA0   X     X     A1Y    25.00    0     18.7   ! tyr
+CA0   X     X     A1W    25.00    0     19.8   ! trp
 CAP   X     X     A2P    25.00    0     41.0   ! pro
 !CD-CE-CF-CB CD-CE-CF-CC improper in trp
 A2W   A3W   A4W   A1W    47.78    0     0.0    ! trp
