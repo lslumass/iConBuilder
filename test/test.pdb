@@ -3,4 +3,7 @@ REMARK  CREATE BY ProteinBuilder/SHANLONG LI
 ATOM      1 CA   ALA X   1      14.040  12.840  14.490  1.00  0.00      PRO
 ATOM      2 CO   ALA X   1      15.370  14.200  14.170  1.00  0.00      PRO
 ATOM      3 CB   ALA X   1      14.390  11.360  13.470  1.00  0.00      PRO
+ATOM      4 CA   ALA X   2      16.694  15.554  13.851  1.00  0.00      PRO
+ATOM      5 CO   ALA X   2      18.405  15.072  13.102  1.00  0.00      PRO
+ATOM      6 CB   ALA X   2      15.843  16.757  12.764  1.00  0.00      PRO
 END
