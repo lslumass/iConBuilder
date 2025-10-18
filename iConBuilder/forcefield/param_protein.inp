@@ -5,8 +5,6 @@
 
 BOND
 !bonds in backbone
-CA0   CON    300.0      1.92  ! CA-CO (non-gly, non-Ala)
-CAG   CON    300.0      1.92  ! CA-CO (gly)
 CA0   CA0    300.0      3.80  ! 
 CA0   CAG    300.0      3.80  !
 CA0   CAP    300.0      3.80  ! proline
@@ -32,9 +30,7 @@ CA0   A4H    400.0      1.98  ! his
 CA0   A1F    150.0      1.98  ! phe
 CA0   A1Y    150.0      2.35  ! tyr
 CA0   A1W    300.0      2.01  ! trp
-CA0   A2P    300.0      1.92  ! pro
-! special bond in pro
-CON   A2P     50.0      3.44  ! pro
+CAP   A2P    300.0      1.92  ! pro
 !bonds in sidechain
 A3K   QdK    100.0      3.06  ! lys CB-CC
 A3R   QdR    100.0      3.52  ! arg CB-CC
@@ -57,31 +53,42 @@ A3W   A4W    300.0      2.23  ! trp CE-CF
 
 THETAS
 !angles in backbone             
-CA0   CON   CA0   50.0     124.5  ! non-pro, non-gly
-CA0   CON   CAG   50.0     124.5  ! gly
-CAG   CON   CAG   50.0     124.5  ! gly-gly
-CON   CA0   CON    5.0     115.0  ! non-gly
-CON   CAG   CON    5.0     115.6  ! gly
-!CON-CA-CB
-CON   CA0   A1A   20.0     100.0  ! ala
-CON   CA0   A2V   20.0     112.7  ! val
-CON   CA0   A1L    5.0     116.8  ! leu
-CON   CA0   A1I   10.0     120.2  ! ile
-CON   CA0   A5M   10.0     140.0  ! met
-CON   CA0   P5N    5.0     126.6  ! asn
-CON   CA0   QaD    5.0     118.2  ! asp
-CON   CA0   P4Q   10.0     136.1  ! gln
-CON   CA0   QaE   10.0     125.0  ! glu
-CON   CA0   P1C    5.0     114.4  ! cys
-CON   CA0   P1S   10.0     100.0  ! ser
-CON   CA0   P1T   10.0     109.2  ! thr
-CON   CA0   A3K   10.0     125.5  ! lys
-CON   CA0   A3R   10.0     125.5  ! arg
-CON   CA0   A4H    5.0     113.3  ! his
-CON   CA0   A1F    5.0     108.3  ! phe
-CON   CA0   A1Y    3.0     113.4  ! tyr
-CON   CA0   A1W   10.0     100.0  ! trp
-CON   CA0   A2P   10.0     125.2  ! pro   
+CA0   CA0   CA0    5.0     135.0
+CA0   CA0   CAG    5.0     135.0
+CA0   CA0   CAP    5.0     135.0
+CA0   CAG   CA0    5.0     135.0
+CA0   CAG   CAG    5.0     135.0
+CA0   CAG   CAP    5.0     135.0
+CA0   CAP   CA0    5.0     135.0
+CA0   CAP   CAG    5.0     135.0
+CA0   CAP   CAP    5.0     135.0
+CAG   CA0   CAG    5.0     135.0
+CAG   CA0   CAP    5.0     135.0
+CAG   CAG   CAG    5.0     135.0
+CAG   CAG   CAP    5.0     135.0
+CAG   CAP   CAG    5.0     135.0
+CAG   CAP   CAP    5.0     135.0
+CAP   CAP   CAP    5.0     135.0
+!CA-CA-CB
+X     CA0   A1A   20.0     100.0  ! ala
+X     CA0   A2V   20.0     112.7  ! val
+X     CA0   A1L    5.0     116.8  ! leu
+X     CA0   A1I   10.0     120.2  ! ile
+X     CA0   A5M   10.0     140.0  ! met
+X     CA0   P5N    5.0     126.6  ! asn
+X     CA0   QaD    5.0     118.2  ! asp
+X     CA0   P4Q   10.0     136.1  ! gln
+X     CA0   QaE   10.0     125.0  ! glu
+X     CA0   P1C    5.0     114.4  ! cys
+X     CA0   P1S   10.0     100.0  ! ser
+X     CA0   P1T   10.0     109.2  ! thr
+X     CA0   A3K   10.0     125.5  ! lys
+X     CA0   A3R   10.0     125.5  ! arg
+X     CA0   A4H    5.0     113.3  ! his
+X     CA0   A1F    5.0     108.3  ! phe
+X     CA0   A1Y    3.0     113.4  ! tyr
+X     CA0   A1W   10.0     100.0  ! trp
+X     CAP   A2P   10.0     125.2  ! pro   
 !CA-CB-CC (and/or CA-CB-CD)
 CA0   A3K   QdK   10.0     140.0  ! lys
 CA0   A3R   QdR   10.0     134.3  ! arg
@@ -96,27 +103,40 @@ A1W   A2W   A4W   50.0     101.6  ! trp
 
 PHI
 ! backbone torsions
-X     CA0   CON   X      20.00    1     0.0
-X     CAG   CON   X      20.00    1     0.0
-! X-CON-CA-CB
-X     CON   CA0   A2V     0.00    1     0.0  ! val
-X     CON   CA0   A1L     0.00    1     0.0  ! leu
-X     CON   CA0   A1I     0.00    1     0.0  ! ile
-X     CON   CA0   A5M     0.00    1     0.0  ! met
-X     CON   CA0   P5N     0.00    1     0.0  ! asn
-X     CON   CA0   QaD     0.00    1     0.0  ! asp
-X     CON   CA0   P4Q     0.00    1     0.0  ! gln
-X     CON   CA0   QaE     0.00    1     0.0  ! glu
-X     CON   CA0   P1C     0.00    1     0.0  ! cys
-X     CON   CA0   P1S     0.00    1     0.0  ! ser
-X     CON   CA0   P1T     0.00    1     0.0  ! thr
-X     CON   CA0   A3K     0.00    1     0.0  ! lys
-X     CON   CA0   A3R     0.00    1     0.0  ! arg
-X     CON   CA0   A4H     0.00    1     0.0  ! his
-X     CON   CA0   A1F     0.00    1     0.0  ! phe
-X     CON   CA0   A1Y     0.00    1     0.0  ! tyr
-X     CON   CA0   A1W     0.00    1     0.0  ! trp
-X     CON   CA0   A2P     0.00    1     0.0  ! pro
+X     CA0   CA0   X       0.20    1    60.0
+X     CA0   CAG   X       0.20    1    60.0
+X     CA0   CAP   X       0.20    1    60.0
+X     CAG   CAG   X       0.00    1    60.0
+X     CAG   CAP   X       0.20    1    60.0
+X     CAP   CAP   X       0.20    1    60.0
+
+! CA-CA-CA-CB
+X     CA0   CA0   A2V     0.00    1     0.0  ! val
+X     CA0   CA0   A1L     0.00    1     0.0  ! leu
+X     CA0   CA0   A1I     0.00    1     0.0  ! ile
+X     CA0   CA0   A5M     0.00    1     0.0  ! met
+X     CA0   CA0   P5N     0.00    1     0.0  ! asn
+X     CA0   CA0   QaD     0.00    1     0.0  ! asp
+X     CA0   CA0   P4Q     0.00    1     0.0  ! gln
+X     CA0   CA0   QaE     0.00    1     0.0  ! glu
+X     CA0   CA0   P1C     0.00    1     0.0  ! cys
+X     CA0   CA0   P1S     0.00    1     0.0  ! ser
+X     CA0   CA0   P1T     0.00    1     0.0  ! thr
+X     CA0   CA0   A3K     0.00    1     0.0  ! lys
+X     CA0   CA0   A3R     0.00    1     0.0  ! arg
+X     CA0   CA0   A4H     0.00    1     0.0  ! his
+X     CA0   CA0   A1F     0.00    1     0.0  ! phe
+X     CA0   CA0   A1Y     0.00    1     0.0  ! tyr
+X     CA0   CA0   A1W     0.00    1     0.0  ! trp
+X     CA0   CA0   A2P     0.00    1     0.0  ! pro
+
+! CA-CA-CB-CC
+X     CA0   A3K   QdK     0.00    1     0.0
+X     CA0   A3R   QdR     0.00    1     0.0
+X     CA0   A4H   P1H     0.00    1     0.0
+X     CA0   A1F   A2F     0.00    1     0.0
+X     CA0   A1Y   A2Y     0.00    1     0.0
+X     CA0   A1W   P1W     0.00    1     0.0
 
 
 IMPHI
@@ -139,16 +159,14 @@ CA0   X     X     A4H    15.00    0     19.3   ! his
 CA0   X     X     A1F    20.00    0     20.1   ! phe
 CA0   X     X     A1Y    10.00    0     18.7   ! tyr
 CA0   X     X     A1W    20.00    0     19.8   ! trp
-CA0   X     X     A2P    25.00    0     41.0   ! pro
+CAP   X     X     A2P    25.00    0     41.0   ! pro
 !CD-CE-CF-CB CD-CE-CF-CC improper in trp
 A2W   A3W   A4W   A1W    47.78    0     0.0    ! trp
 A2W   A3W   A4W   P1W    47.78    0     0.0    ! trp
-!# for Proline
-CON   X     CA0   A2P    55.00    0     0.0    ! PRO
 
 
 NONBONDED  NBXMOD 3  ATOM CDIEL SWITCH VATOM VDISTANCE VSWITCH -
-     CUTNB 16.0  CTOFNB 18.0  CTONNB 16.
+     CUTNB 18.0  CTOFNB 18.0  CTONNB 16.0
 
 !                 Emin         Rmin
 !                 (kcal/mol)   (A)
