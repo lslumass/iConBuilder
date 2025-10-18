@@ -1,5 +1,5 @@
 """
-this package is used to generate CG_protein model
+this package is used to generate CG_RNA model
 Athour: Shanlong Li
 Date: Nov 13, 2023
 """
@@ -12,8 +12,9 @@ from pathlib import Path
 AAs = {'A':'ALA','R':'ARG','N':'ASN','D':'ASP','C':'CYS','Q':'GLN','E':'GLU','G':'GLY','H':'HIS','I':'ILE',
        'L':'LEU','K':'LYS','M':'MET','F':'PHE','P':'PRO','S':'SER','T':'THR','W':'TRP','Y':'TYR','V':'VAL'}
 
-def printcg(atom, file):
-    file.write('{}  {:5d} {:>2}   {} {}{:4d}    {:8.3f}{:8.3f}{:8.3f}{:6.2f}{:6.2f}      {}\n'.format(atom[0],int(atom[1]),atom[2],atom[3],atom[4],int(atom[5]),atom[6],atom[7],atom[8],atom[9],atom[10], atom[11]))
+def printcg(atoms, file):
+    for atom in atoms:
+        file.write('{}  {:5d} {:>2}   {} {}{:4d}    {:8.3f}{:8.3f}{:8.3f}{:6.2f}{:6.2f}      {}\n'.format(atom[0],int(atom[1]),atom[2],atom[3],atom[4],int(atom[5]),atom[6],atom[7],atom[8],atom[9],atom[10], atom[11]))
 
 def read_map(seq):
     atoms = []
@@ -101,8 +102,8 @@ def build(seqs, out):
     with open(out, 'w') as f:
         print('REMARK  iCon Protein Model', file=f)
         print('REMARK  CREATE BY ProteinBuilder/SHANLONG LI', file=f)
-        idx = 1
-        res = 1
+        idx = 0
+        res = 0
         for i, seq in enumerate(seqs):
             atoms = read_map(seq)
             if i == 0:
@@ -112,15 +113,10 @@ def build(seqs, out):
             CA = [atoms[0][6], atoms[0][7], atoms[0][8]]
             CO = [atoms[1][6], atoms[1][7], atoms[1][8]]
             
-            tmp = 0
             for atom in atoms:
-                if atom[2] == 'CO':
-                    continue
-                else:
-                    idx += tmp
-                    atom[1] = idx
-                    atom[5] += res
-                    printcg(atom, f)
-                    tmp += 1
+                atom[1] += idx
+                atom[5] += res
+            idx += len(atoms)
             res += 1
+            printcg(atoms, f)
         print('END', file=f)
