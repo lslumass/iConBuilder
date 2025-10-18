@@ -187,7 +187,7 @@ BOND CA    +CA       CA   CB
 BOND CB    CC        CB   CD        CC    CD
 ANGL -CA   CA  +CA      +CA   CA   CB      CA   CB   CC
 DIHE -CA   CA   CB   CC
-IMPH CA   -CA  +CA   CB
+IMPH CA   -CA  +CA   CB       CB   CA   CC   CD
 
 
 RESI PHE     0.00
@@ -201,7 +201,7 @@ BOND CA    +CA       CA   CB
 BOND CB    CC        CB   CD        CC    CD
 ANGL -CA   CA  +CA      +CA   CA   CB      CA   CB   CC
 DIHE -CA   CA   CB   CC
-IMPH CA   -CA  +CA   CB
+IMPH CA   -CA  +CA   CB       CB   CA   CC   CD
 
 
 RESI TYR     0.00
@@ -215,7 +215,7 @@ BOND CA    +CA       CA   CB
 BOND CB    CC        CB   CD        CC    CD
 ANGL -CA   CA  +CA      +CA   CA   CB      CA   CB   CC
 DIHE -CA   CA   CB   CC
-IMPH CA   -CA  +CA   CB
+IMPH CA   -CA  +CA   CB       CB   CA   CC   CD
 
 
 RESI TRP     0.00
@@ -233,7 +233,8 @@ BOND CD   CE       CD    CF       CE    CF
 ANGL -CA   CA  +CA      +CA   CA   CB      CA   CB   CC
 ANGL CB   CD   CF       CC   CD   CE
 DIHE -CA   CA   CB   CC
-IMPH CA   -CA  +CA   CB       CD   CE   CF   CB        CD   CE   CF   CC
+IMPH CA   -CA  +CA   CB       CB   CA   CC   CD
+IMPH CD   CE   CF   CB        CD   CE   CF   CC
 
 
 RESI PRO     0.00

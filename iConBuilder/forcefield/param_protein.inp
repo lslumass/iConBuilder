@@ -181,7 +181,7 @@ X     CA0   A1W   P1W     0.00    1     0.0
 
 IMPHI
 !CA chirality
-CA0   X     X     A1A    25.00    0     26.3   ! ala
+CA0   X     X     A1A    55.00    0     35.3   ! ala
 CA0   X     X     A2V    25.00    0     20.0   ! val
 CA0   X     X     A1L    25.00    0     16.0   ! leu
 CA0   X     X     A1I    25.00    0     17.2   ! ile
